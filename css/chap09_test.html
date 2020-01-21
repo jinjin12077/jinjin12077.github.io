@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>chap09 CSS 포지셔닝 연습문제</title>
+</head>
+<body>
+    
+    <h2>Ch.09 CSS 포지셔닝 연습문제</h2>
+    <ol>
+        <li><b>문제1</b>
+            <p>quiz-1.html 문서를 다음 조건에 맞도록 수정하세요.</p><br>
+            <ul>
+                <li>float 속성을 이용해 내비게이션 항목을 왼쪽부터 차례대로 배치합니다.</li>
+                <li>내비게이션 항목의 오른쪽 마진을 15px로 지정해 각 항목들이 조금씩 떨어지도록 합니다.</li>
+                <li>기존 margin-bottom 값을 20px로 수정합니다.</li>
+                <li>float 속성 때문에 내비게이션 외의 항목에도 float의 영향을 받으므로 clear 속성을 사용해 '강아지 용품 준비허가'부터는 float의 영향을 받지 않도록 합니다.</li>
+                <li>기존 margin-bottom 값을 20px로 수정합니다.</li>
+            </ul><br><br>
+            <style>
+                body{
+                font-family:"맑은 고딕", "고딕", "굴림";
+                }
+                a:link {
+                text-decoration:none;
+                }
+                nav ul{
+                list-style-type:none;
+                margin:0px;
+                padding:0px;
+                
+                }
+                nav ul li{
+                font-size:1.5em;
+                padding-left:7px;
+                margin-bottom:15px;
+                border-left-width:5px;
+                border-left-color:#990066;
+                border-left-style:solid;
+                float: left;
+                margin-right: 15px;
+                }
+                #content{clear: both;}
+                section article {
+                padding-left:10px;
+                margin-bottom:20px;
+                border-top:1px #a6a6a6 dashed;
+                border-bottom: 1px #a6a6a6 dashed;
+                }
+            </style>
+            <nav>
+                <ul>
+                  <li><a href="#">애완견 종류</a></li>
+                  <li><a href="#">입양하기</a></li>
+                  <li><a href="#">건강돌보기</a></li>
+                  <li><a href="#">더불어살기</a></li>
+                </ul>
+            </nav>
+            <section id="content">
+              <h2>강아지 용품 준비하기</h2>
+              <article>  
+                <h3>강아지 집 </h3>
+                 <p>강아지가 편히 쉴 수 있는 포근한 집이 필요합니다. 강아지의 집은 강아지가 다 큰 후에도 계속 쓸 수 있는 집으로 구입하세요.집을 구입하실 때는 박음질이 잘 되어 있는지, 세탁이 간편한 제품인지 꼭 확인하시고 고르시는 것이 좋습니다.</p>
+              </article>
+              <article> 
+                <h3>강아지 먹이 </h3>
+                <p>강아지의 먹이는 꼭 어린 강아지용으로 나와있는 사료를 선택하세요. 강아지들은 사람에 비해 성장속도가 8배정도 빠르답니다. 따라서 강아지에게는 성장속도에 맞는 사료를 급여하셔야 합니다. 사람이 먹는 음식을 먹게 되면 양념과 향신료에 입맛이 익숙해지고, 비만이 될 가능성이 매우 높아집니다. 강아지용 사료는 생후 12개월까지 급여하셔야 합니다.</p>
+               </article>  
+             </section>
+            <footer>
+              <p>Copyright 2012 funnycom</p>
+            </footer>
+        </li><br><br>
+        <li><b>문제2</b>
+            <p>quiz-2.html 문서에는 기본적인 표를 사용한 내용이 들어 있습니다. 다음 표를 만들기 위해 조건에 맞게 표 스타일을 적용하세요.</p><br>
+            <ul>
+                <li>표와 셀에 테두리(1px solid black)를 그린 후 한 줄로 합쳐 표시하세요.</li>
+                <li>표의 설명 글(caption)은 표 아래쪽에 표시하세요.</li>
+                <li>각 셀에는 padding:10px을 적용해 적잘한 여백을 두세요.</li>
+                <li>float 속성 때문에 내비게이션 외의 항목에도 float의 영향을 받으므로 clear 속성을 사용해 '강아지 용훔 준비하기'부터는 float의 영향을 받지 않도록 합니다.</li>
+            </ul><br><br>
+            <style>
+                table{border-collapse: collapse; border: 1px solid black;caption-side: bottom;}
+                table th,td{padding: 10px; text-align: center; vertical-align: center;}
+                .heading, th{background-color: #eeeeee;}
+            </style>
+            <table border="1">
+                <caption>2015 국민 독서실태</caption>
+                <thead>
+                  <tr class="heading">
+                    <th>구분</th>
+                    <th>성인</th>
+                    <th>학생</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>독서율</th>
+                    <td>65.3%</td>
+                    <td>94.9%</td>
+                  </tr>
+                  <tr>
+                    <th>연평균 독서량</th>
+                    <td>9.1권</td>
+                    <td>29.8권</td>
+                  </tr>
+                  <tr>
+                    <th>공공도서관 이용률</th>
+                    <td>28.2%</td>
+                    <td>64.9%</td>
+                  </tr>      
+                </tbody>
+              </table>
+            
+            
+        </li><br><br>
+    </ol>
+    
+    
+    <p>참고자료 : HTML5+CSS3 웹표준의 정석 p.378</p>
+    
+
+
+
+
+</body>
+</html>
